@@ -4,7 +4,7 @@ import {useState} from 'react';
 function home() {
 return (<div>
   <div><Contador /></div>
-  <Caps>ola mundo - </Caps>xxx
+  <Caps dado = 'de novo' text = 'texto text'>ola mundo</Caps>xxx
   </div>
 )
 }
@@ -14,9 +14,11 @@ export default home
 
 function Caps(props){
   const textoin = props.children;
+  const texto2 = props.dado;
+  const texto3 = props.text;
   const textoCap = textoin.toUpperCase();
 return (<div>
-  <div>{textoCap}</div>
+  <div>{textoCap} - {texto2} - {texto3}</div>
   </div>
 )
 }
